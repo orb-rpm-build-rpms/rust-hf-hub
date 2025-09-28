@@ -1,0 +1,36 @@
+[package]
+summary = "A limited re-implementation of the huggingface_hub python package in Rust"
+
+[tests]
+comments = [
+    "skip tests that need a network connection",
+    "skip doctest that needs a network connection",
+]
+run = [
+    "doc",
+    "lib",
+]
+skip.lib = [
+    "api::sync::tests::dataset",
+    "api::sync::tests::detailed_info",
+    "api::sync::tests::info",
+    "api::sync::tests::locking",
+    "api::sync::tests::models",
+    "api::sync::tests::resume",
+    "api::sync::tests::simple",
+    "api::sync::tests::simple_with_retries",
+    "api::tokio::tests::dataset",
+    "api::tokio::tests::info",
+    "api::tokio::tests::info_request",
+    "api::tokio::tests::locking",
+    "api::tokio::tests::models",
+    "api::tokio::tests::repo_info_failed",
+    "api::tokio::tests::resume",
+    "api::tokio::tests::revision",
+    "api::tokio::tests::simple",
+]
+skip-exact.lib = true
+skip.doc = [
+    "34",
+]
+skip-exact.doc = false
