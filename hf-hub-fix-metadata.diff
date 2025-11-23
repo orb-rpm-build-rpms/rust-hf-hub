@@ -1,5 +1,5 @@
 --- hf-hub-0.4.3/Cargo.toml	1970-01-01T00:00:01+00:00
-+++ hf-hub-0.4.3/Cargo.toml	2025-09-28T22:15:13.563776+00:00
++++ hf-hub-0.4.3/Cargo.toml	2025-11-23T08:49:37.189204+00:00
 @@ -58,7 +58,6 @@
      "dep:reqwest",
      "reqwest/charset",
@@ -13,7 +13,7 @@
  
  [dependencies.dirs]
 -version = "6"
-+version = "5"
++version = ">=5, <7"
  
  [dependencies.futures]
  version = "0.3.28"

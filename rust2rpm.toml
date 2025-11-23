@@ -1,5 +1,11 @@
 [package]
 summary = "A limited re-implementation of the huggingface_hub python package in Rust"
+cargo-toml-patch-comments = [
+    """\
+    Allow dirs 6: \
+    https://github.com/huggingface/hf-hub/commit/86f85179527d52d71c9999ee3527432091db248c\
+    """,
+]
 
 [tests]
 comments = [
