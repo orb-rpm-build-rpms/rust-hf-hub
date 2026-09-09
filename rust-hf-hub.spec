@@ -5,15 +5,13 @@
 %global crate hf-hub
 
 Name:           rust-hf-hub
-Version:        0.4.3
+Version:        0.4.1
 Release:        %autorelease
 Summary:        A limited re-implementation of the huggingface_hub python package in Rust
 
 License:        Apache-2.0
 URL:            https://crates.io/crates/hf-hub
 Source:         %{crates_source}
-# Automatically generated patch to strip dependencies and normalize metadata
-Patch:          hf-hub-fix-metadata-auto.diff
 # Manually created patch for downstream crate metadata changes
 # * Allow dirs 6, hex-literal 1:
 #   https://github.com/huggingface/hf-hub/commit/86f85179527d52d71c9999ee3527432091db248c
@@ -39,7 +37,7 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-%license %{crate_instdir}/LICENSE
+# FIXME: no license files detected
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 
